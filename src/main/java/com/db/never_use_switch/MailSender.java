@@ -37,8 +37,10 @@ public class MailSender {
         if (mailGenerator == null) {
             throw new UnsupportedOperationException(mailCode + " not supported yet");
         }
+
         String html = mailGenerator.generateHtml();
         send(html);
+        throw new DBMailException("Something wrong with method send!");
     }
 
     private void send(String html) {

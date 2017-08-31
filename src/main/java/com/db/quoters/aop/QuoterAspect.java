@@ -15,6 +15,9 @@ public class QuoterAspect {
     @Before("execution(* com.db..*.say*(..))")
 //    @Before("@annotation(com.db.quoters.Transaction)")
     public void handleSayMethods() {
+
+        System.out.println("А теперь цитата: ");
+        System.out.println("А теперь цитата: ");
         System.out.println("А теперь цитата: ");
     }
 
